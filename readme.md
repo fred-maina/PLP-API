@@ -1,8 +1,4 @@
-Sure, here's a detailed README.md file for your Django Quiz App, along with a requirements.txt file:
 
-README.md:
-
-```
 # Django Quiz App
 
 The Django Quiz App is a web application that allows users to take quizzes consisting of multiple-choice questions. It provides a user-friendly interface for answering questions, calculates the score based on the user's responses, and displays the final score at the end of the quiz.
