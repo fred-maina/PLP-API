@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzy - Questions</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <section id="question-section" class="container-fluid">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-lg-6">
+                <h2 class="mb-4 text-center">Choose Category of Questions</h2>
+                <form method="post" action="{% url 'quiz' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="category">Select Category:</label>
+                        <select class="form-control" id="category" name="category">
+                            <option value="any">Any Category</option>
+                            <option value="random">Random Category</option>
+                            <option value="computers">Computers</option>
+                            <option value="art">Art</option>
+                            <option value="history">History</option>
+                            <option value="mathematics">Mathematics</option>
+                            <option value="vehicles">Vehicles</option>
+                            <option value="anime">Anime</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="number_of_questions">Select Number of Questions:</label>
+                        <input type="number" class="form-control" id="number_of_questions" name="number_of_questions" min="5" max="50" value="">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Start Quiz</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

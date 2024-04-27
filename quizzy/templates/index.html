@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Quizzy</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-fluid d-flex align-items-end h-100">
+        <div class="row w-100">
+            <div class="col-lg-6 d-flex align-items-center">
+                <div class="content">
+                    <h1 id="welcome-heading" class="display-3">Welcome to Quizzy</h1>
+                    <h4 id="subheading" class="mb-4">Unlock Endless Fun with Our Questions App</h4>
+                    <p id="description" class="lead mb-5">From hilarious riddles to mind-bending trivia, explore a wide range of question categories including pop culture, history, and more!</p>
+                    <form action="{% url 'index' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary btn-lg rounded-pill pl-4">Play Now</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-flex align-items-center">
+                <img src="static/images/quizzy.gif" class="img-fluid w-100 rounded" alt="Quizzy GIF">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
