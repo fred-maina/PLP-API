@@ -11,25 +11,21 @@
     <div class="center-content">
         <form method="post" action="{% url 'finalscore' %}">
             {% csrf_token %}
-            {% for question in json_data.results %}
-            <div id="question-display" class="mb-4">
-                <!-- Display the question number and question here -->
-                <h3 class="mb-3">Question {{ forloop.counter }}: {{ question.question|safe }}</h3>
-            </div>
-            <div id="options-display">
-                <!-- Display the multiple choices here -->
-                {% for choice in question.incorrect_answers %}
+            {% for question, choices in questions %}
+    <div id="question-display{{ forloop.counter }}" class="mb-4">
+        <h3 class="mb-3">Question {{ forloop.counter }}: {{ question|safe }}</h3>
+        <div>
+            {% for choice in choices %}
                 <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="question{{ forloop.parentloop.counter }}_choice" value="{{ choice|safe }}">
-                    <label class="form-check-label" for="choice{{ forloop.parentloop.counter }}{{ forloop.counter }}">{{ choice|safe }}</label>
+                    <input class="form-check-input" type="radio" name="{{ question }}" value="{{ choice }}">
+                    <label class="form-check-label" for="{{ question }}">{{ choice|safe }}</label>
                 </div>
-                {% endfor %}
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question{{ forloop.parentloop.counter }}_choice" value="{{ question.correct_answer|safe }}">
-                    <label class="form-check-label" for="choice{{ forloop.parentloop.counter }}{{ forloop.counter }}">{{ question.correct_answer|safe }}</label>
-                </div>
-            </div>
             {% endfor %}
+        </div>
+    </div>
+{% endfor %}
+
+
             <div class="mt-4">
                 <button id="submit-button" type="submit" class="btn btn-primary">Submit</button>
             </div>
