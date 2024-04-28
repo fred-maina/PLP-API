@@ -27,7 +27,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "replit.dev",
     '841b9213-9379-4d4b-9517-a5f8a7ae7979-00-3hxip4p19c0ip.janeway.replit.dev',
-    'http://127.0.0.1/', 'http://localhost:8000'
+    '127.0.0.1', 'localhost:8000'
 ]
 
 # Application definition
