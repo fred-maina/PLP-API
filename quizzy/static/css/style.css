@@ -67,6 +67,10 @@ h3 {
     max-height: calc(100vh - 100px); /* Adjust the value as needed */
     overflow-y: auto; /* Add vertical scrolling if needed */
     }
+    #start-quiz-btn[disabled] {
+        cursor: not-allowed; /* Change cursor to denied */
+    }
+    
     
 
 
