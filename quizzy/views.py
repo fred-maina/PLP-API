@@ -76,7 +76,7 @@ def finalscore(request):
                 correct_questions += 1
 
         # Calculate the percentage of correct questions
-        percentage = (correct_questions / number_of_questions) * 100 if number_of_questions != 0 else 0
+        percentage = int((correct_questions / number_of_questions) * 100 if number_of_questions != 0 else 0)
 
         # Pass the score data to the template
         context = {
