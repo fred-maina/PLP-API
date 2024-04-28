@@ -54,7 +54,7 @@ def finalscore(request):
         correct_questions = 0
 
         # Iterate over each question and extract the selected answer
-        i=0
+       
         for i, question in enumerate(json_data['results']):
             
             # Construct the name of the radio button input for this question
