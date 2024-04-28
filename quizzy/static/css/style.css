@@ -70,6 +70,34 @@ h3 {
     #start-quiz-btn[disabled] {
         cursor: not-allowed; /* Change cursor to denied */
     }
+    .loader {
+        display: none; /* Hide the loader by default */
+        margin: auto;
+        border: 12px solid var(--secondary-color); /* Match the border color with secondary-color */
+        border-radius: 50%;
+        border-top: 12px solid var(--primary-color); /* Match the border top color with primary-color */
+        width: 100px; /* Reduce the size of the loader */
+        height: 100px; /* Reduce the size of the loader */
+        animation: spinner 2s linear infinite;
+    }
+    
+    @keyframes spinner {
+        0% {
+            transform: rotate(0deg);
+        }
+    
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .loader-text {
+        display: none;
+        text-align: center;
+        color: var(--secondary-color); 
+        font-size: 14px;
+        margin-top: 10px;
+    }
     
     
 
