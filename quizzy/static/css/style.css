@@ -31,7 +31,9 @@ body {
 /* Styles for the question section */
 #question-section {
     padding: 50px 0;
-}
+    
+    }
+    
 
 #question-section h2 {
     color: var(--primary-color);
@@ -51,6 +53,21 @@ body {
     background-color: #6a6af7;
     border-color: #6a6af7;
 }
+
 h3 {
     font-size: 1.5rem;
 }
+
+
+.center-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: calc(100vh - 100px); /* Adjust the value as needed */
+    overflow-y: auto; /* Add vertical scrolling if needed */
+    }
+    
+
+
+

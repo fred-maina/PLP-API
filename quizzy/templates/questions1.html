@@ -1,5 +1,3 @@
-<!-- questions1.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,32 +8,32 @@
     <link href="static/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <form method="post" action="{% url 'finalscore' %}">
-        {% csrf_token %}
-        {% for question in json_data.results %}
-        <div id="question-display" class="mb-4">
-            <!-- Display the question number and question here -->
-            <h3 class="mb-3">Question {{ forloop.counter }}: {{ question.question|safe }}</h3>
-        </div>
-        <div id="options-display">
-            <!-- Display the multiple choices here -->
-            {% for choice in question.incorrect_answers %}
-            <div class="form-check mb-2">
-                <input class="form-check-input" type="radio" name="question{{ forloop.parentloop.counter }}_choice" value="{{ choice|safe }}">
-                <label class="form-check-label" for="choice{{ forloop.parentloop.counter }}{{ forloop.counter }}">{{ choice|safe }}</label>
+    <div class="center-content">
+        <form method="post" action="{% url 'finalscore' %}">
+            {% csrf_token %}
+            {% for question in json_data.results %}
+            <div id="question-display" class="mb-4">
+                <!-- Display the question number and question here -->
+                <h3 class="mb-3">Question {{ forloop.counter }}: {{ question.question|safe }}</h3>
+            </div>
+            <div id="options-display">
+                <!-- Display the multiple choices here -->
+                {% for choice in question.incorrect_answers %}
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="question{{ forloop.parentloop.counter }}_choice" value="{{ choice|safe }}">
+                    <label class="form-check-label" for="choice{{ forloop.parentloop.counter }}{{ forloop.counter }}">{{ choice|safe }}</label>
+                </div>
+                {% endfor %}
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question{{ forloop.parentloop.counter }}_choice" value="{{ question.correct_answer|safe }}">
+                    <label class="form-check-label" for="choice{{ forloop.parentloop.counter }}{{ forloop.counter }}">{{ question.correct_answer|safe }}</label>
+                </div>
             </div>
             {% endfor %}
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="question{{ forloop.parentloop.counter }}_choice" value="{{ question.correct_answer|safe }}">
-                <label class="form-check-label" for="choice{{ forloop.parentloop.counter }}{{ forloop.counter }}">{{ question.correct_answer|safe }}</label>
+            <div class="mt-4">
+                <button id="submit-button" type="submit" class="btn btn-primary">Submit</button>
             </div>
-        </div>
-        {% endfor %}
-        <div class="mt-4">
-            <button id="submit-button" type="submit" class="btn btn-primary">Submit</button>
-        </div>
-    </form>
-    
-    
+        </form>
+    </div>
 </body>
 </html>
