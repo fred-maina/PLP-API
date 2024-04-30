@@ -24,7 +24,7 @@ SECRET_KEY = "django-insecure-3xyp^0_(m35(b$8o64wq$==sb_7b=dnnu)6j+t045a9my=(x)0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
+ALLOWED_HOSTS = ['192.168.2.104',
     "replit.dev",
     '841b9213-9379-4d4b-9517-a5f8a7ae7979-00-3hxip4p19c0ip.janeway.replit.dev',
     '127.0.0.1', 'localhost:8000'
