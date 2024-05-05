@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Quizzy</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="static/css/style.css" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
                 </div>
             </div>
             <div class="col-lg-6 d-none d-lg-flex align-items-center">
-                <img src="static/images/quizzy.gif" class="img-fluid w-100 rounded" alt="Quizzy GIF">
+                <img src="{% static 'images/quizzy.gif'%}" class="img-fluid w-100 rounded" alt="Quizzy GIF">
             </div>
         </div>
     </div>
