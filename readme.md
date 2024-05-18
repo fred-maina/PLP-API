@@ -3,7 +3,8 @@
 
 The Django Quiz App is a web application that allows users to take quizzes consisting of multiple-choice questions. It provides a user-friendly interface for answering questions, calculates the score based on the user's responses, and displays the final score at the end of the quiz.
 ##  Live preview
-You can preview this project <a href="https://quizzy-7808719c9cd7.herokuapp.com/" target="_blank"> Here </a>
+You can preview this project <a href="https://quizzy-7808719c9cd7.herokuapp.com/" target="_blank">here</a>.
+
 
 The quiz questions for this application are sourced from the Open Trivia Database API. The Open Trivia Database provides a completely free JSON API for use in programming projects. It offers a wide variety of categories and questions, making it suitable for building quiz applications like this one.
 
