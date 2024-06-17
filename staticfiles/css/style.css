@@ -1,0 +1,139 @@
+/* style.css */
+
+:root {
+    --background-color: #edf9fd;
+    --text-color: #000105;
+    --primary-color: #7c7cf8;
+    --secondary-color: #3b4968;
+    --accent-color: #0d0d21;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#welcome-heading,
+#subheading {
+    color: var(--primary-color);
+}
+
+#description {
+    color: var(--secondary-color);
+}
+
+/* Styles for the play button */
+#play-button {
+    color: #fff;
+}
+
+/* Styles for the question section */
+#question-section {
+    padding: 50px 0;
+}
+
+#question-section h2 {
+    color: var(--primary-color);
+}
+
+.form-group label {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #6a6af7;
+    border-color: #6a6af7;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.center-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: calc(100vh - 100px); /* Adjust the value as needed */
+    overflow-y: auto; /* Add vertical scrolling if needed */
+}
+
+#start-quiz-btn[disabled] {
+    cursor: not-allowed; /* Change cursor to denied */
+}
+
+.loader {
+    display: none; /* Hide the loader by default */
+    margin: auto;
+    border: 12px solid var(--secondary-color); /* Match the border color with secondary-color */
+    border-radius: 50%;
+    border-top: 12px solid var(--primary-color); /* Match the border top color with primary-color */
+    width: 100px; /* Reduce the size of the loader */
+    height: 100px; /* Reduce the size of the loader */
+    animation: spinner 2s linear infinite;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-text {
+    display: none;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.final-score-content {
+    max-width: 600px;
+    padding: 20px;
+    border: 3px solid var(--primary-color); /* Use primary color for the border */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(124, 124, 248, 0.5); /* Adjust glow effect with primary color */
+    background-color: #FFFFFF; /* White background */
+}
+
+.final-score-content h2,
+.final-score-content h3 {
+    color: var(--primary-color); /* Use primary color for heading text */
+}
+
+.final-score-content a.btn-primary {
+    background-color: var(--primary-color); /* Use primary color for button background */
+    border-color: var(--primary-color); /* Use primary color for button border */
+}
+
+.btn-primary:hover {
+    background-color: #6a6af7; /* Adjust hover color to a shade of primary color */
+    border-color: #6a6af7; /* Adjust hover color to a shade of primary color */
+}
+/* Styles for the final score content container */
+.final-score-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    padding: 20px;
+    border: 3px solid var(--primary-color); /* Use primary color for the border */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(124, 124, 248, 0.5); /* Adjust glow effect with primary color */
+    background-color: #FFFFFF; /* White background */
+}
+
